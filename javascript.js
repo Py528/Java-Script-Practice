@@ -1,19 +1,12 @@
-let a = 1;
-console.log(greater());
-// console.log(y(2,1));
-function greater(){
-  (function (num1 , num2){
-    let add =addition(num1 , num2);
-    return add;
-  })
+const originals = [1, 2, 3, 8];
+
+const doubled = originals.map((item) => item * 2);
+
+console.log(doubled);
+
+function pranav() {
+  return (function () {
+    return console.log("return pranav");
+  })()
 }
-  // function y(num1 , num2){
-    //   let sub = substraction(num1 , num2);
-  //   return sub;
-  // }
-  // function addition(q,w){
-  //   return q+w;
-  // }
-  // function substraction(q,w){
-  //   return q-w;
-  // }
+pranav();
