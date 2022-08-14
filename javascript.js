@@ -2,11 +2,9 @@ const originals = [1, 2, 3, 8];
 
 const doubled = originals.map((item) => item * 2);
 
-console.log(doubled);
+// console.log(doubled);
 
-function pranav() {
-  return (function () {
-    return console.log("return pranav");
-  })()
+const pranav= (a, b=12) =>{
+    return a*b
 }
-pranav();
+console.log(pranav(12));
