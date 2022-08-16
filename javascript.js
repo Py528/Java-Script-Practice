@@ -4,14 +4,33 @@ const doubled = originals.map((item) => item * 2);
 
 // console.log(doubled);
 
-const pranav= (a, b=12) =>{
+const pranav = (a, b = 12) => {
+  return console.log(pranav(12));
+};
+
+const log = (a) => {
+  console.log(a);
+};
+
+
+let add7 = () => {
+    let a = prompt("never used before");
+  return parseInt(a) + 7;
+};
+
+function multiply(){
+    let a = prompt()
+    let b = prompt()
     return a*b
 }
-console.log(pranav(12));
 
-const log= (a) => {console.log(a)}
-outer(function(){log("1")}())
+let capitalize = () => {
+    let a = prompt("Enter a string")
+    let cap = a.charAt(0);
+    return (alert(cap.toUpperCase()+a.slice(1)))
+}
 
-setTimeout(function(){log("3")},6000)
-
-function outer(){log("2")}
+let lastLetter= function(){
+    let a = prompt()
+    return (alert(a.slice(-1)))
+}()
