@@ -1,4 +1,4 @@
-const playerSelection = "rock";
+const playerSelection = prompt();
 const computerSelection = getComputerChoice();
 let playerCounter = 0;
 let computerCounter = 0;
@@ -6,17 +6,17 @@ function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     console.log("its a draw");
   } else if (playerSelection === "paper" && computerSelection === "scissor") {
-    return computerCounter++;
+    return (computerCounter += 1);
   } else if (playerSelection === "paper" && computerSelection === "rock") {
-    return playerCounter++;
+    return (playerCounter += 1);
   } else if (playerSelection === "scissor" && computerSelection === "paper") {
-    return playerCounter++;
+    return (playerCounter += 1);
   } else if (playerSelection === "scissor" && computerSelection === "rock") {
-    return computerCounter++;
+    return (computerCounter += 1);
   } else if (playerSelection === "rock" && computerSelection === "paper") {
-    return computerCounter++;
+    return (computerCounter += 1);
   } else if (playerSelection === "rock" && computerSelection === "scissor") {
-    return playerCounter++;
+    return (playerCounter += 1);
   } else {
     console.log("why not");
   }
@@ -28,8 +28,20 @@ function getComputerChoice() {
 
 function game() {
   for (let i = 0; i < 5; i++) {
-    let computerSelectioa = getComputerChoice();
-    playRound(playerSelection, computerSelectioa);
+    let cs = computerSelection;
+    cs = getComputerChoice();
+    playRound(playerSelection, cs);
+    if (playerCounter > computerCounter) {
+      console.log("Player wins");
+    } else if (playerCounter < computerCounter) {
+      console.log("Computer wins");
+    }
   }
 }
 game();
+if(playerCounter>computerCounter){
+  console.log("Final winner player")
+}
+else if(playerCounter<computerCounter){
+  console.log("Final winner Computer");
+}
