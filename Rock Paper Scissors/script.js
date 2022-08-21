@@ -28,9 +28,10 @@ function getComputerChoice() {
 
 function game() {
   for (let i = 0; i < 5; i++) {
+    let ps = prompt();
     let cs = computerSelection;
     cs = getComputerChoice();
-    playRound(playerSelection, cs);
+    playRound(ps, cs);
     if (playerCounter > computerCounter) {
       console.log("Player wins");
     } else if (playerCounter < computerCounter) {
