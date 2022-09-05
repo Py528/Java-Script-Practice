@@ -22,6 +22,10 @@ function randomSelection(){
 
 const age=234;
 ams=123;
+(function(a,s){
+    'use strict'
+    c= log(a+s)
+})(12,12,14)
 let a=123;
 var c=123;
 log(typeof ams)
