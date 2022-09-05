@@ -18,5 +18,10 @@ function randomSelection(){
 
 // getInfo[]
 // log(randomSelection())
-log(getInfo[randomSelection()])
+// log(getInfo[randomSelection()])
 
+const age=234;
+ams=123;
+let a=123;
+var c=123;
+log(typeof ams)
